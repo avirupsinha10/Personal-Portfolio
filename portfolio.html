@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avirup Sinha - SDE-1 at JUSPAY</title>
+    <title>Avirup Sinha - Software Development Engineer</title>
     <meta name="description" content="SDE-1 at JUSPAY specializing in Payments architecture and AI Agentic workflows. Expert in building scalable fintech solutions.">
     
     <!-- Fonts -->
@@ -97,11 +97,22 @@
         }
 
         .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--brand-color);
+            display: flex;
+            align-items: center;
             text-decoration: none;
-            font-family: 'Roboto Mono', monospace;
+        }
+
+        .logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid var(--brand-color);
+            transition: all 0.3s ease;
+        }
+
+        .logo img:hover {
+            border-color: var(--text-light);
+            transform: scale(1.1);
         }
 
         .nav {
@@ -479,6 +490,40 @@
         /* Hide default cursor */
         * {
             cursor: none !important;
+        }
+
+        /* Hero Avatar */
+        .hero-avatar {
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+
+        .hero-avatar img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            animation: avatarFloat 3s ease-in-out infinite;
+        }
+
+        .hero-avatar img:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes avatarFloat {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-avatar img {
+                width: 120px;
+                height: 120px;
+            }
         }
 
         /* Experience Section */
@@ -921,7 +966,9 @@
     <!-- Header -->
     <header class="header">
         <div class="header-content">
-            <a href="#" class="logo">AS</a>
+            <a href="#" class="logo">
+                <img src="geminiAvatarbg.png" alt="Avirup Sinha">
+            </a>
             <nav class="nav">
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
@@ -940,8 +987,11 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
+            <div class="hero-avatar">
+                <img src="geminiAvatarbg.png" alt="Avirup Sinha">
+            </div>
             <h1 class="hero-title">Avirup Sinha</h1>
-            <p class="hero-subtitle">SDE-1 at JUSPAY</p>
+            <p class="hero-subtitle">Software Development Engineer</p>
             <p class="hero-description">
                 Expertise in Payments architecture and AI Agentic workflows. 
                 Building scalable fintech solutions that power the future of digital payments.
@@ -1022,10 +1072,10 @@
                         <i class="fas fa-code"></i>
                     </div>
                     <h3 class="expertise-title">
-                        <span class="highlight">Frontend Dev</span> React, NextJS
+                        <span class="highlight">Backend Dev</span> Rust, Haskell, Beam, Servant
                     </h3>
                     <div class="expertise-description">
-                        Passionate about UI/UX. Over 5 years of development experience in HTML, CSS, JS, React and NextJS frameworks.
+                        Passionate about Robust Systems. Over 2.5 years of development experience in building Monolith and Microservices Architecture frameworks.
                     </div>
                 </div>
                 
@@ -1115,7 +1165,6 @@
                         </div>
                         <button class="copy-btn" onclick="copyToClipboard('avirup.sinha@juspay.in', this)">
                             <i class="fas fa-copy"></i>
-                            <span>Copy</span>
                         </button>
                     </div>
                     <div class="contact-item">
@@ -1125,7 +1174,6 @@
                         </div>
                         <button class="copy-btn" onclick="copyToClipboard('+91-9635887114', this)">
                             <i class="fas fa-copy"></i>
-                            <span>Copy</span>
                         </button>
                     </div>
                     <div class="contact-item">
@@ -1135,7 +1183,6 @@
                         </div>
                         <button class="copy-btn" onclick="copyToClipboard('Bangalore, India', this)">
                             <i class="fas fa-copy"></i>
-                            <span>Copy</span>
                         </button>
                     </div>
                     <div class="contact-item">
@@ -1145,7 +1192,6 @@
                         </div>
                         <button class="copy-btn" onclick="copyToClipboard('SDE-1 at JUSPAY', this)">
                             <i class="fas fa-copy"></i>
-                            <span>Copy</span>
                         </button>
                     </div>
                     
@@ -1197,8 +1243,8 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2024 Avirup Sinha. All rights reserved.</p>
-                <p>SDE-1 at JUSPAY | Payments Architecture & AI Agentic Workflows</p>
+                <p>&copy; 2025 Avirup Sinha. All rights reserved.</p>
+                <p>Payments Architecture & AI Agentic Workflows</p>
             </div>
         </div>
     </footer>
@@ -1452,7 +1498,7 @@ This email was automatically generated from your portfolio website.
             navigator.clipboard.writeText(text).then(function() {
                 // Success feedback
                 const originalContent = button.innerHTML;
-                button.innerHTML = '<i class="fas fa-check"></i><span>Copied!</span>';
+                button.innerHTML = '<i class="fas fa-check"></i>';
                 button.classList.add('copied');
                 
                 // Reset after 2 seconds
@@ -1471,7 +1517,7 @@ This email was automatically generated from your portfolio website.
                 
                 // Success feedback
                 const originalContent = button.innerHTML;
-                button.innerHTML = '<i class="fas fa-check"></i><span>Copied!</span>';
+                button.innerHTML = '<i class="fas fa-check"></i>';
                 button.classList.add('copied');
                 
                 // Reset after 2 seconds
