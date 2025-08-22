@@ -4,22 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avirup Sinha - Software Development Engineer</title>
-    <meta name="description" content="SDE-1 at JUSPAY specializing in Payments architecture and AI Agentic workflows. Expert in building scalable fintech solutions.">
+    <meta name="description" content="Software Engineer specializing in Financial Technology, Microservices Architecture, and System Optimization. Expert in building scalable financial solutions.">
     
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@coreui/icons/css/brand.min.css">
+
     
     <!-- EmailJS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
         // Initialize EmailJS with public key
-        emailjs.init('ddHABxtsXJck9G436HESf'); // You'll need to replace this with your actual public key
+        // IMPORTANT: Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS Public Key from EmailJS Dashboard -> Account -> API Keys
+        emailjs.init('smU6Vt8ioeg5Fn34W'); 
+        console.log('EmailJS initialized with public key: smU6Vt8ioeg5Fn34W');
     </script>
     
     <style>
         :root {
-            --brand-color: #66d9ed;
+            --brand-color: #66d9ed; /* Deep Teal for a more professional look */
             --dark-bg: #0f0f0f;
             --dark-light: #17161a;
             --text-light: #ffffff;
@@ -37,7 +41,7 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: sans-serif;
             background: var(--dark-bg);
             color: var(--text-light);
             line-height: 1.6;
@@ -103,11 +107,14 @@
         }
 
         .logo img {
-            width: 40px;
-            height: 40px;
+            width: 40px; /* Reverted to original width */
+            height: 40px; /* Reverted to original height */
             border-radius: 50%;
             border: 2px solid var(--brand-color);
             transition: all 0.3s ease;
+            object-fit: contain; /* Ensure the image fits within the circle */
+            object-position: center; /* Center the image within the circle */
+            padding: 5px; /* Add padding to shrink the image display area within the circle */
         }
 
         .logo img:hover {
@@ -171,6 +178,7 @@
             justify-content: center;
             position: relative;
             background: linear-gradient(135deg, var(--dark-bg) 0%, var(--dark-light) 100%);
+            padding-top: 5rem;
         }
 
         .hero::before {
@@ -180,7 +188,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%2366d9ed" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23008080" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
             opacity: 0.1;
         }
 
@@ -193,6 +201,7 @@
         }
 
         .hero-title {
+            font-family: 'Poppins', sans-serif;
             font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 800;
             margin-bottom: 1rem;
@@ -250,7 +259,7 @@
             background: transparent;
             color: var(--brand-color);
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(102, 217, 237, 0.3);
+            box-shadow: 0 10px 25px rgba(0, 128, 128, 0.3);
         }
 
         .btn-outline {
@@ -263,7 +272,7 @@
             background: var(--brand-color);
             color: var(--dark-bg);
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(102, 217, 237, 0.3);
+            box-shadow: 0 10px 25px rgba(0, 128, 128, 0.3);
         }
 
         /* About Section */
@@ -286,7 +295,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%2366d9ed" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23008080" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
             opacity: 0.05;
         }
         
@@ -299,7 +308,7 @@
         
         .expertise-card {
             background: rgba(23, 22, 26, 0.5);
-            border: 1px solid rgba(102, 217, 237, 0.2);
+            border: 1px solid rgba(0, 128, 128, 0.2);
             border-radius: 15px;
             padding: 40px 30px;
             transition: all 0.3s ease;
@@ -444,13 +453,13 @@
         }
 
         .skill-tag {
-            background: rgba(102, 217, 237, 0.1);
+            background: rgba(0, 128, 128, 0.1);
             color: var(--brand-color);
             padding: 8px 16px;
             border-radius: 20px;
             font-size: 0.9rem;
             font-weight: 500;
-            border: 1px solid rgba(102, 217, 237, 0.3);
+            border: 1px solid rgba(0, 128, 128, 0.3);
         }
 
         /* Custom Cursor */
@@ -470,7 +479,7 @@
             position: fixed;
             width: 40px;
             height: 40px;
-            border: 2px solid rgba(102, 217, 237, 0.5);
+            border: 2px solid rgba(0, 128, 128, 0.5);
             border-radius: 50%;
             pointer-events: none;
             z-index: 9998;
@@ -498,12 +507,25 @@
             animation: fadeInUp 1s ease 0.3s both;
         }
 
+        .hero-avatar {
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.3s both;
+            /* Ensure the container can accommodate the floating animation */
+            padding-top: 20px; /* Increased padding to prevent clipping */
+            padding-bottom: 20px; /* Increased padding to prevent clipping */
+        }
+
         .hero-avatar img {
             width: 150px;
             height: 150px;
             border-radius: 50%;
             transition: all 0.3s ease;
             animation: avatarFloat 3s ease-in-out infinite;
+            /* Ensure image is contained within its bounds and maintains aspect ratio */
+            display: block;
+            margin: 0 auto;
+            object-fit: cover; /* Add this to maintain aspect ratio */
+            object-position: 50% 30%; /* Adjust vertical position to show more of the bottom */
         }
 
         .hero-avatar img:hover {
@@ -515,7 +537,7 @@
                 transform: translateY(0px);
             }
             50% {
-                transform: translateY(-10px);
+                transform: translateY(-15px); /* Increased float distance slightly */
             }
         }
 
@@ -523,6 +545,11 @@
             .hero-avatar img {
                 width: 120px;
                 height: 120px;
+            }
+            .hero-avatar {
+                /* Adjust padding for mobile if needed, or rely on general padding */
+                padding-top: 20px; /* Increased padding for mobile to prevent clipping */
+                padding-bottom: 20px;
             }
         }
 
@@ -547,7 +574,7 @@
             top: 0;
             bottom: 0;
             width: 3px;
-            background: linear-gradient(to bottom, var(--brand-color), rgba(102, 217, 237, 0.3));
+            background: linear-gradient(to bottom, var(--brand-color), rgba(0, 128, 128, 0.3));
             transform: translateX(-50%);
             border-radius: 2px;
         }
@@ -570,10 +597,10 @@
 
         .exp-content {
             width: 42%;
-            background: rgba(102, 217, 237, 0.05);
+            background: rgba(0, 128, 128, 0.05);
             padding: 35px;
             border-radius: 20px;
-            border: 1px solid rgba(102, 217, 237, 0.2);
+            border: 1px solid rgba(0, 128, 128, 0.2);
             position: relative;
             backdrop-filter: blur(10px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -606,13 +633,13 @@
         .exp-item:nth-child(odd) .exp-content::before {
             right: -15px;
             border-width: 15px 0 15px 15px;
-            border-color: transparent transparent transparent rgba(102, 217, 237, 0.05);
+            border-color: transparent transparent transparent rgba(0, 128, 128, 0.05);
         }
 
         .exp-item:nth-child(even) .exp-content::before {
             left: -15px;
             border-width: 15px 15px 15px 0;
-            border-color: transparent rgba(102, 217, 237, 0.05) transparent transparent;
+            border-color: transparent rgba(0, 128, 128, 0.05) transparent transparent;
         }
 
         .exp-icon {
@@ -632,13 +659,13 @@
             font-weight: 900;
             z-index: 3;
             border: 4px solid var(--dark-bg);
-            box-shadow: 0 5px 20px rgba(102, 217, 237, 0.3);
+            box-shadow: 0 5px 20px rgba(0, 128, 128, 0.3);
             transition: all 0.3s ease;
         }
 
         .exp-icon:hover {
             transform: translateX(-50%) scale(1.1);
-            box-shadow: 0 10px 30px rgba(102, 217, 237, 0.5);
+            box-shadow: 0 10px 30px rgba(0, 128, 128, 0.5);
         }
 
         .exp-title {
@@ -657,7 +684,7 @@
         .exp-duration {
             color: var(--text-dim);
             margin-bottom: 15px;
-            font-family: 'Roboto Mono', monospace;
+            font-family: monospace;
         }
 
         .exp-description {
@@ -690,16 +717,16 @@
             gap: 15px;
             margin-bottom: 20px;
             padding: 15px;
-            background: rgba(102, 217, 237, 0.05);
+            background: rgba(0, 128, 128, 0.05);
             border-radius: 10px;
-            border: 1px solid rgba(102, 217, 237, 0.2);
+            border: 1px solid rgba(0, 128, 128, 0.2);
             position: relative;
             transition: all 0.3s ease;
         }
 
         .contact-item:hover {
-            background: rgba(102, 217, 237, 0.1);
-            border-color: rgba(102, 217, 237, 0.4);
+            background: rgba(0, 128, 128, 0.1);
+            border-color: rgba(0, 128, 128, 0.4);
         }
 
         .contact-item-content {
@@ -759,8 +786,8 @@
             justify-content: center;
             width: 50px;
             height: 50px;
-            background: rgba(102, 217, 237, 0.1);
-            border: 2px solid rgba(102, 217, 237, 0.3);
+            background: rgba(0, 128, 128, 0.1);
+            border: 2px solid rgba(0, 128, 128, 0.3);
             border-radius: 50%;
             color: var(--brand-color);
             text-decoration: none;
@@ -771,14 +798,14 @@
             background: var(--brand-color);
             color: var(--dark-bg);
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(102, 217, 237, 0.3);
+            box-shadow: 0 10px 25px rgba(0, 128, 128, 0.3);
         }
 
         .contact-form {
-            background: rgba(102, 217, 237, 0.05);
+            background: rgba(0, 128, 128, 0.05);
             padding: 40px;
             border-radius: 15px;
-            border: 1px solid rgba(102, 217, 237, 0.2);
+            border: 1px solid rgba(0, 128, 128, 0.2);
         }
 
         .form-group {
@@ -797,7 +824,7 @@
             width: 100%;
             padding: 15px;
             background: rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(102, 217, 237, 0.3);
+            border: 1px solid rgba(0, 128, 128, 0.3);
             border-radius: 8px;
             color: var(--text-light);
             font-family: inherit;
@@ -819,7 +846,7 @@
         .footer {
             background: var(--dark-bg);
             padding: 40px 0;
-            border-top: 1px solid rgba(102, 217, 237, 0.2);
+            border-top: 1px solid rgba(0, 128, 128, 0.2);
         }
 
         .footer-content {
@@ -936,6 +963,41 @@
             }
         }
 
+        /* Scroll to Top Button */
+        .scroll-to-top-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--brand-color);
+            color: var(--dark-bg);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(0, 128, 128, 0.4);
+        }
+
+        .scroll-to-top-btn.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(-5px);
+        }
+
+        .scroll-to-top-btn:hover {
+            background: var(--accent-2);
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(102, 217, 237, 0.6);
+        }
+
         @media (max-width: 480px) {
             .hero-content {
                 padding: 0 15px;
@@ -966,8 +1028,8 @@
     <!-- Header -->
     <header class="header">
         <div class="header-content">
-            <a href="#" class="logo">
-                <img src="geminiAvatarbg.png" alt="Avirup Sinha">
+            <a href="/" class="logo">
+                <img src="suitcase.png" alt="Avirup Sinha">
             </a>
             <nav class="nav">
                 <a href="#home">Home</a>
@@ -993,8 +1055,7 @@
             <h1 class="hero-title">Avirup Sinha</h1>
             <p class="hero-subtitle">Software Development Engineer</p>
             <p class="hero-description">
-                Expertise in Payments architecture and AI Agentic workflows. 
-                Building scalable fintech solutions that power the future of digital payments.
+                Expertise in Payments architecture and AI Agentic workflows. Building scalable fintech solutions that power the future of digital payments.
             </p>
             <div class="cta-buttons">
                 <a href="#contact" class="btn btn-primary">
@@ -1004,6 +1065,10 @@
                 <a href="#experience" class="btn btn-outline">
                     <i class="fas fa-user"></i>
                     View Experience
+                </a>
+                <a href="https://docs.google.com/document/d/1ov4iUQNreqFzz3qiOYl2Bnh7rtMCe3qXZJuUfTcp0_o/edit?usp=sharing" class="btn btn-outline" target="_blank">
+                    <i class="fas fa-download"></i>
+                    My Resume
                 </a>
             </div>
         </div>
@@ -1018,20 +1083,17 @@
             </div>
             <div class="about-content">
                 <div class="about-image animate-on-scroll">
-                    <div class="profile-img">AS</div>
+                    <div class="profile-img">
+                        <img src="avirupimage.JPG" alt="Avirup Sinha Profile" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 10%; border-radius: 50%;">
+                    </div>
                 </div>
                 <div class="about-text animate-on-scroll">
                     <h3>Software Development Engineer</h3>
                     <p>
-                        I'm a dedicated Software Development Engineer at JUSPAY with deep expertise in 
-                        payments architecture and AI agentic workflows. My passion lies in creating 
-                        scalable, efficient solutions that revolutionize how financial transactions 
-                        are processed and managed.
+                        I'm a Software Development Engineer at JUSPAY with deep expertise in payments architecture and AI agentic workflows. My passion lies in creating scalable, efficient solutions that revolutionize how financial transactions are processed and managed.
                     </p>
                     <p>
-                        With a strong foundation in backend systems and a keen interest in emerging 
-                        AI technologies, I specialize in building robust payment infrastructures 
-                        that can handle millions of transactions while maintaining security and reliability.
+                        With a strong foundation in backend systems and a keen interest in emerging AI technologies, I specialize in building robust payment infrastructures that can handle millions of transactions while maintaining security and reliability.
                     </p>
                     <div class="skills-list">
                         <span class="skill-tag">Payments Architecture</span>
@@ -1060,10 +1122,10 @@
                         <i class="fas fa-desktop"></i>
                     </div>
                     <h3 class="expertise-title">
-                        <span class="highlight">Software</span> Development
+                        <span class="highlight">Backend</span> Development
                     </h3>
                     <div class="expertise-description">
-                        Experienced in both functional and OOP: Dart, Python, Java, JavaScript, TypeScript.
+                        Expert in Haskell, Rust, JavaScript, TypeScript with strong foundation in object-oriented programming and data structures.
                     </div>
                 </div>
                 
@@ -1072,10 +1134,10 @@
                         <i class="fas fa-code"></i>
                     </div>
                     <h3 class="expertise-title">
-                        <span class="highlight">Backend Dev</span> Rust, Haskell, Beam, Servant
+                        <span class="highlight">Financial</span> Architecture
                     </h3>
                     <div class="expertise-description">
-                        Passionate about Robust Systems. Over 2.5 years of development experience in building Monolith and Microservices Architecture frameworks.
+                        Passionate about Robust Systems. Over 2.5 years of development experience in building Monolith and Microservices Architecture frameworks
                     </div>
                 </div>
                 
@@ -1084,10 +1146,10 @@
                         <i class="fas fa-mobile-alt"></i>
                     </div>
                     <h3 class="expertise-title">
-                        <span class="highlight">Flutter Dev</span> Android, iOS
+                        <span class="highlight">Cloud &</span> DevOps
                     </h3>
                     <div class="expertise-description">
-                        Skilled in developing hybrid mobile apps and cross-platform solutions using the Flutter framework.
+                        Proficient in Kubernetes, Docker, SQL Server, and TeamCity for building scalable and robust production systems.
                     </div>
                 </div>
             </div>
@@ -1099,33 +1161,29 @@
         <div class="container">
             <div class="section-title animate-on-scroll">
                 <h2>Experience</h2>
-                <p>My journey in building cutting-edge fintech solutions</p>
+                <p>My journey in building cutting-edge financial technology solutions</p>
             </div>
             <div class="exp-timeline">
                 <div class="exp-item animate-on-scroll">
                     <div class="exp-content">
-                        <h3 class="exp-title">Software Development Engineer - I</h3>
-                        <h4 class="exp-company">JUSPAY</h4>
-                        <p class="exp-duration">Current Position</p>
+                        <h3 class="exp-title">AI & Automation Expert</h3>
+                        <h4 class="exp-company">Innovation Focus</h4>
+                        <p class="exp-duration">Current</p>
                         <p class="exp-description">
-                            Leading development of advanced payment architecture solutions and AI agentic workflows. 
-                            Specializing in building scalable backend systems that process millions of transactions 
-                            daily. Working on innovative AI-driven automation systems that enhance payment processing 
-                            efficiency and user experience.
+                            Pioneering AI agentic workflows in fintech, creating intelligent systems that can autonomously handle complex payment scenarios. Implementing machine learning algorithms to optimize transaction routing and fraud detection mechanisms.
+                        </p>
                         </p>
                     </div>
                     <div class="exp-icon">1</div>
                 </div>
-                
+
                 <div class="exp-item animate-on-scroll">
                     <div class="exp-content">
-                        <h3 class="exp-title">Payments Architecture Specialist</h3>
-                        <h4 class="exp-company">Key Achievements</h4>
-                        <p class="exp-duration">Ongoing</p>
+                        <h3 class="exp-title">Software Development Engineer - I</h3>
+                        <h4 class="exp-company">JUSPAY</h4>
+                        <p class="exp-duration">Jan 2024 – Present</p>
                         <p class="exp-description">
-                            Designed and implemented robust payment processing systems with focus on scalability, 
-                            security, and performance. Developed AI-powered agentic workflows that automate 
-                            complex payment scenarios, reducing processing time and improving accuracy.
+                            Leading development of advanced payment architecture solutions and AI agentic workflows. Specializing in building scalable backend systems that process millions of transactions daily. Working on innovative AI-driven automation systems that enhance payment processing efficiency and user experience.
                         </p>
                     </div>
                     <div class="exp-icon">2</div>
@@ -1133,13 +1191,11 @@
                 
                 <div class="exp-item animate-on-scroll">
                     <div class="exp-content">
-                        <h3 class="exp-title">AI & Automation Expert</h3>
-                        <h4 class="exp-company">Innovation Focus</h4>
-                        <p class="exp-duration">Current</p>
+                        <h3 class="exp-title">SDE Intern</h3>
+                        <h4 class="exp-company">JUSPAY</h4>
+                        <p class="exp-duration">Mar 2022 - July 2023</p>
                         <p class="exp-description">
-                            Pioneering AI agentic workflows in fintech, creating intelligent systems that 
-                            can autonomously handle complex payment scenarios. Implementing machine learning 
-                            algorithms to optimize transaction routing and fraud detection mechanisms.
+                            Built an Onboarding Assistant Software from scratch that reduced merchant integration time from over two months to less than a week, achieving a 90% improvement in efficiency. I also developed an intelligent JavaScript configuration file parser that maintained backward compatibility while streamlining merchant setup. Additionally, I created analytics tooling that uncovered critical insights into feature usage, directly shaping the product roadmap. My work spanned across Haskell, PostgreSQL, and React (ReScript), giving me hands-on experience in building impactful, production-grade systems.
                         </p>
                     </div>
                     <div class="exp-icon">3</div>
@@ -1161,9 +1217,9 @@
                     <div class="contact-item">
                         <div class="contact-item-content">
                             <i class="fas fa-envelope"></i>
-                            <span>avirup.sinha@juspay.in</span>
+                            <span>avirupsinha10@gmail.com</span>
                         </div>
-                        <button class="copy-btn" onclick="copyToClipboard('avirup.sinha@juspay.in', this)">
+                        <button class="copy-btn" onclick="copyToClipboard('avirupsinha10@gmail.com', this)">
                             <i class="fas fa-copy"></i>
                         </button>
                     </div>
@@ -1185,28 +1241,19 @@
                             <i class="fas fa-copy"></i>
                         </button>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-item-content">
-                            <i class="fas fa-briefcase"></i>
-                            <span>SDE-1 at JUSPAY</span>
-                        </div>
-                        <button class="copy-btn" onclick="copyToClipboard('SDE-1 at JUSPAY', this)">
-                            <i class="fas fa-copy"></i>
-                        </button>
-                    </div>
                     
                     <div class="social-links">
-                        <a href="https://linkedin.com/in/avirup-sinha" class="social-link" target="_blank">
+                        <a href="https://www.linkedin.com/in/avirup-sinha" class="social-link" target="_blank">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="https://github.com/avirup-sinha" class="social-link" target="_blank">
+                        <a href="https://github.com/avirupsinha10" class="social-link" target="_blank">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="mailto:avirup.sinha@juspay.in" class="social-link">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                        <a href="https://twitter.com/avirup_sinha" class="social-link" target="_blank">
+                        <a href="https://x.com/avirupsinha5" class="social-link" target="_blank">
                             <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="mailto:avirupsinha10@gmail.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
                         </a>
                     </div>
                 </div>
@@ -1244,10 +1291,14 @@
         <div class="container">
             <div class="footer-content">
                 <p>&copy; 2025 Avirup Sinha. All rights reserved.</p>
-                <p>Payments Architecture & AI Agentic Workflows</p>
             </div>
         </div>
     </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script>
         // Custom Cursor
@@ -1401,10 +1452,6 @@
 💬 Message:
 ${message}
 
-📊 Technical Details:
-• Timestamp: ${timestamp}
-• Browser: ${userAgent}
-• Page URL: ${pageUrl}
 
 🎯 Response Required:
 This message was sent through your portfolio contact form and requires a response.
@@ -1424,7 +1471,8 @@ This email was automatically generated from your portfolio website.
             };
             
             // Send email using EmailJS
-            emailjs.send('service_portfolio', 'template_contact', templateParams)
+            // IMPORTANT: Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual EmailJS Service ID and Template ID from EmailJS Dashboard -> Email Services and Email Templates
+            emailjs.send('service_hb5gzho', 'template_217ypqq', templateParams)
                 .then(function(response) {
                     console.log('Email sent successfully:', response);
                     
@@ -1527,6 +1575,24 @@ This email was automatically generated from your portfolio website.
                 }, 2000);
             });
         }
+
+        // Scroll to Top Button functionality
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) { // Show button after scrolling 300px
+                scrollToTopBtn.classList.add('show');
+            } else {
+                scrollToTopBtn.classList.remove('show');
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
     </script>
 </body>
 </html>
